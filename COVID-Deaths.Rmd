@@ -18,28 +18,21 @@ library(janitor)
 library(dplyr)
 ```
 
-```{r graph}
+```{r graph, echo = FALSE}
 table <- read_csv(file = "United_States_COVID-19_Cases_and_Deaths_by_State_over_Time.csv", show_col_types = FALSE)
-
-table
 ```
 
-```{r}
+```{r conversion, echo = FALSE}
 #colnames(table) = c("submission_date", "state", "tot_cases", "ChangeInTotalPercent")
 
 table$tot_death <- as.numeric(table$tot_death)
 table$tot_cases <- as.numeric(table$tot_cases)
+```
 
+```{r graphing, echo = FALSE}
 table |>
   select(tot_cases, tot_death) |>
   ggplot(aes(x = tot_cases, y = tot_death)) +
-  geom_point()
-
-```
-
-```{r}
-table |>
-  ggplot(aes(x = tot_cases, y = tot_deaths)) +
-  geom_point()
+  geom_point(size = 0.25)
 ```
 
