@@ -14,5 +14,31 @@ knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(rvest)
 library(ggthemes)
+library(janitor)
+library(dplyr)
 ```
+
+```{r graph}
+deaths_table <- "https://www.worldometers.info/coronavirus/worldwide-graphs/" |> 
+  read_html() |>
+  html_elements("table") |> 
+  html_table()
+
+table1 <- deaths_table[[1]]
+table1
+```
+
+```{r}
+colnames(table1) = c("Date", "Deaths", "ChangeInTotal", "ChangeInTotalPercent")
+
+table1$Deaths <- as.numeric(table1$Deaths)
+table1$ChangeInTotal <- as.numeric(table1$ChangeInTotal)
+table1$ChangeInTotalPercent <- as.numeric(table1$ChangeInTotalPercent)
+table1$Date <- as.Date(table1$Date, "%m/%d/%Y")
+
+table1
+
+```
+
+
 

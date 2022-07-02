@@ -1,0 +1,45 @@
+---
+title: "Untitled"
+description: |
+  A new article created using the Distill format.
+author:
+  - name: Sai Gottemukkula
+    
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(rvest)
+library(ggthemes)
+library(janitor)
+library(dplyr)
+```
+
+```{r graph}
+table <- read_csv(file = "United_States_COVID-19_Cases_and_Deaths_by_State_over_Time.csv", show_col_types = FALSE)
+
+table
+```
+
+```{r}
+#colnames(table) = c("submission_date", "state", "tot_cases", "ChangeInTotalPercent")
+
+table$tot_death <- as.numeric(table$tot_death)
+table$tot_cases <- as.numeric(table$tot_cases)
+
+table |>
+  select(tot_cases, tot_death) |>
+  ggplot(aes(x = tot_cases, y = tot_death)) +
+  geom_point()
+
+```
+
+```{r}
+table |>
+  ggplot(aes(x = tot_cases, y = tot_deaths)) +
+  geom_point()
+```
+
