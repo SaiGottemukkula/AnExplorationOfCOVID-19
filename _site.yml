@@ -7,6 +7,8 @@ navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "Cases v Deaths"
+      href: COVID-Deaths.html
     - text: "About"
       href: about.html
 output: distill::distill_article
