@@ -33,6 +33,7 @@ table$tot_cases <- as.numeric(table$tot_cases)
 table |>
   select(tot_cases, tot_death) |>
   ggplot(aes(x = tot_cases, y = tot_death)) +
-  geom_point(size = 0.25)
+  geom_point(size = 0.25) + 
+  labs(title = "Coronavirus Cases To Deaths Ratio", subtitle = "The ratio continued upwards for most of the pandemic", x = "Coronavirus cases", y = "Coronavirus Deaths", caption = "Source: CDC")
 ```
 
