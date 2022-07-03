@@ -9,6 +9,10 @@ navbar:
       href: index.html
     - text: "Cases v Deaths"
       href: COVID-Deaths.html
+    - text: "Actual vs Probable Cases"
+      href: Actual-vs-Probable-Cases.html
     - text: "About"
       href: about.html
+    - text: "Bibliography"
+      href: bibliography.bib
 output: distill::distill_article
