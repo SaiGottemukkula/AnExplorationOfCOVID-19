@@ -25,6 +25,7 @@ table <- read_csv(file = "United_States_COVID-19_Cases_and_Deaths_by_State_over_
 table |>
   select(tot_cases, prob_cases) |>
   drop_na(prob_cases) |>
+  drop_na(tot_cases) |>
   ggplot(aes(x = tot_cases, y = tot_cases)) +
   geom_point(size = 0.25) + 
   labs(title = "Actual Cases vs Projected Cases", subtitle = "The predictions are extremely accurate", x = "Projected Cases", y = "Actual Cases", caption = "Source: CDC")

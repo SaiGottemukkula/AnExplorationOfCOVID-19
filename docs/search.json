@@ -6,7 +6,7 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-07-03T18:19:49-04:00"
+      "last_modified": "2022-07-03T18:23:57-04:00"
     },
     {
       "path": "Actual-vs-Probable-Cases.html",
@@ -20,7 +20,7 @@
       ],
       "date": "`r Sys.Date()`",
       "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-07-03T18:19:56-04:00"
+      "last_modified": "2022-07-03T18:24:04-04:00"
     },
     {
       "path": "COVID-Deaths.html",
@@ -34,7 +34,7 @@
       ],
       "date": "`r Sys.Date()`",
       "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-07-03T18:20:02-04:00"
+      "last_modified": "2022-07-03T18:24:10-04:00"
     },
     {
       "path": "index.html",
@@ -42,7 +42,7 @@
       "description": "Welcome to my final project for the datascience bootcamp!\n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-07-03T18:20:03-04:00"
+      "last_modified": "2022-07-03T18:24:11-04:00"
     },
     {
       "path": "Total-COVID-Deaths.html",
@@ -56,7 +56,7 @@
       ],
       "date": "`r Sys.Date()`",
       "contents": "\r\n\r\n# A tibble: 892 × 4\r\n   Date           `Total\\nDeaths` `Change\\nin Total` `Change in \\nTo…`\r\n   <chr>          <chr>           <chr>              <chr>            \r\n 1 Jul. 2,. 2022  6,360,763       765                0%               \r\n 2 Jul. 1,. 2022  6,359,998       1,503              0%               \r\n 3 Jun. 30,. 2022 6,358,495       1,741              0%               \r\n 4 Jun. 29,. 2022 6,356,754       1,787              0%               \r\n 5 Jun. 28,. 2022 6,354,967       1,734              0%               \r\n 6 Jun. 27,. 2022 6,353,233       1,068              0%               \r\n 7 Jun. 26,. 2022 6,352,165       774                0%               \r\n 8 Jun. 25,. 2022 6,351,391       1,164              0%               \r\n 9 Jun. 24,. 2022 6,350,227       1,621              0%               \r\n10 Jun. 23,. 2022 6,348,606       1,953              0%               \r\n# … with 882 more rows\r\n\r\n\r\n# A tibble: 892 × 4\r\n   Date   Deaths ChangeInTotal ChangeInTotalPercent\r\n   <date>  <dbl>         <dbl>                <dbl>\r\n 1 NA         NA           765                   NA\r\n 2 NA         NA            NA                   NA\r\n 3 NA         NA            NA                   NA\r\n 4 NA         NA            NA                   NA\r\n 5 NA         NA            NA                   NA\r\n 6 NA         NA            NA                   NA\r\n 7 NA         NA           774                   NA\r\n 8 NA         NA            NA                   NA\r\n 9 NA         NA            NA                   NA\r\n10 NA         NA            NA                   NA\r\n# … with 882 more rows\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-07-03T18:20:08-04:00"
+      "last_modified": "2022-07-03T18:24:14-04:00"
     }
   ],
   "collections": []
