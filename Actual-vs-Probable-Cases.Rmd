@@ -6,6 +6,8 @@ author:
   - name: Sai Gottemukkula 
 date: "`r Sys.Date()`"
 output: distill::distill_article
+bibliography: bibliography2.bib
+
 ---
 
 ```{r setup, include=FALSE}
@@ -31,3 +33,4 @@ table |>
   labs(title = "Actual Cases vs Projected Cases", subtitle = "The predictions are extremely accurate", x = "Projected Cases", y = "Actual Cases", caption = "Source: CDC")
 ```
 
+[@Source2]

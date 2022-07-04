@@ -7,6 +7,8 @@ author:
     
 date: "`r Sys.Date()`"
 output: distill::distill_article
+bibliography: bibliography.bib
+
 ---
 
 ```{r setup, include=FALSE}
@@ -33,7 +35,9 @@ table$tot_cases <- as.numeric(table$tot_cases)
 table |>
   select(tot_cases, tot_death) |>
   ggplot(aes(x = tot_cases, y = tot_death)) +
-  geom_point(size = 0.25) + 
+  geom_point(size = 0.15) + 
+  geom_smooth() +
   labs(title = "Coronavirus Cases To Deaths Ratio", subtitle = "The ratio continued upwards for most of the pandemic", x = "Coronavirus Cases", y = "Coronavirus Deaths", caption = "Source: CDC")
 ```
 
+[@Source1]

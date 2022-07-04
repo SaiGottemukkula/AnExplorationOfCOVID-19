@@ -13,6 +13,4 @@ navbar:
       href: Actual-vs-Probable-Cases.html
     - text: "About"
       href: about.html
-    - text: "Bibliography"
-      href: bibliography.bib
 output: distill::distill_article

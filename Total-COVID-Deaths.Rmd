@@ -36,9 +36,7 @@ table1$ChangeInTotal <- as.numeric(table1$ChangeInTotal)
 table1$ChangeInTotalPercent <- as.numeric(table1$ChangeInTotalPercent)
 table1$Date <- as.Date(table1$Date, "%m/%d/%Y")
 
-table1
-
 ```
 
-
+[@Source-1]
 
