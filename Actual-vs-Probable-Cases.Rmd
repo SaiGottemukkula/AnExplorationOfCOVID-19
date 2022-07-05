@@ -23,14 +23,31 @@ library(dplyr)
 table <- read_csv(file = "United_States_COVID-19_Cases_and_Deaths_by_State_over_Time.csv", show_col_types = FALSE)
 ```
 
+Something that I rarely see explored in the context of COVID-19 is how prediction models and AI are used to predict the number of probable cases. The results that I got were quite surprising!
+
 ```{r graphing, echo = FALSE}
 table |>
-  select(tot_cases, prob_cases) |>
-  drop_na(prob_cases) |>
-  drop_na(tot_cases) |>
-  ggplot(aes(x = tot_cases, y = tot_cases)) +
-  geom_point(size = 0.25) + 
-  labs(title = "Actual Cases vs Projected Cases", subtitle = "The predictions are extremely accurate", x = "Projected Cases", y = "Actual Cases", caption = "Source: CDC")
+  filter (state %in% c("CA", "MA", "WY", "MI"), submission_date == "12/25/2021") |>
+  select(state, conf_cases) |>
+  ggplot(aes(x = state, y = conf_cases, fill = state)) +
+  geom_col() +
+  labs(title = "Total Confirmed Cases For Four States", x = "States", y = "Cases (Scientific Notation)", subtitle = "Wyoming has the least cases", caption = "Source: CDC")
 ```
+
+The graph above shows the *confirmed* cases for four different states.
+
+```{r}
+table |>
+  filter (state %in% c("CA", "MA", "WY", "MI"), submission_date == "12/25/2021") |>
+  select(state, prob_cases) |>
+  ggplot(aes(x = state, y = prob_cases, fill = state)) +
+  geom_col() +
+  labs(title = "Total Confirmed Cases For Four States", x = "States", y = "Cases (Scientific Notation)", subtitle = "Wyoming has the least cases", caption = "Source: CDC")
+```
+
+Here, the graph shows the *probable* cases for the sames states, on the same day.
+
+## Analysis
+As you can see, the graphs show that the probable cases aren't exactly very accurate. In fact, they're off by thousands of cases! This shows that our predictions can use some improvements.
 
 [@Source2]

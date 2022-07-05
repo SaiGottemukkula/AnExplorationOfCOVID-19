@@ -40,4 +40,6 @@ table |>
   labs(title = "Coronavirus Cases To Deaths Ratio", subtitle = "The ratio continued upwards for most of the pandemic", x = "Coronavirus Cases", y = "Coronavirus Deaths", caption = "Source: CDC")
 ```
 
+
+
 [@Source1]

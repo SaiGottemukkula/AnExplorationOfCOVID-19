@@ -1,10 +1,19 @@
 ---
 title: "About this site"
-description: |
-  Some additional details about the website
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+## Welcome to the 'About' page!
+
+My name is Sai Gottemukkula, and I'm currently a rising junior at Lexington High School. I enjoy learning about tech, as well as biking with my friends, and playing tennis whenever I can.
+
+## About the site
+
+I chose to do a project based on the Coronavirus pandemic because it was a global event that completely changed the lives of the current generation, from education to jobs, and I felt like I would have done a disservice to all the people that it affected if I did not select the virus as my topic.
+
+## Contact links
+* E-mail: saigthefirst@gmail.com
+* Github: https://github.com/SaiGottemukkula
