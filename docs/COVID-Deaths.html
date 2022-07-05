@@ -2157,12 +2157,45 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
+<p>For the first graphs, I’ll compare the most left-leaning state’s
+performance to that of the most right-leaning one during the beginning
+of the pandemic. According to worldpopulationreview, Hawaii is the most
+blue state, and Wyoming is the most red state. I’ll use those for my
+comparison.</p>
 <div class="layout-chunk" data-layout="l-body">
+<pre><code># A tibble: 53,520 × 15
+   submission_date state tot_cases conf_cases prob_cases new_case
+   &lt;chr&gt;           &lt;chr&gt;     &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+ 1 12/22/2021      DE       165076     151750      13326      662
+ 2 03/18/2021      NE       206980         NA         NA      298
+ 3 09/01/2021      ND       118491     107475      11016      536
+ 4 03/28/2022      VT       107785         NA         NA      467
+ 5 03/11/2021      MD       390490         NA         NA      924
+ 6 04/21/2022      ID       445350     348949      96401        0
+ 7 02/02/2021      IL      1130917    1130917          0     2304
+ 8 12/13/2020      MD       234647         NA         NA     2638
+ 9 06/15/2020      WI        25480      22932       2548      185
+10 03/10/2020      CA          157        157          0       24
+# … with 53,510 more rows, and 9 more variables: pnew_case &lt;dbl&gt;,
+#   tot_death &lt;dbl&gt;, conf_death &lt;dbl&gt;, prob_death &lt;dbl&gt;,
+#   new_death &lt;dbl&gt;, pnew_death &lt;dbl&gt;, created_at &lt;chr&gt;,
+#   consent_cases &lt;chr&gt;, consent_deaths &lt;chr&gt;</code></pre>
 <p><img src="COVID-Deaths_files/figure-html5/graphing-1.png" width="624" /></p>
 </div>
-<p><span class="citation" data-cites="Source1">(<a href="#ref-Source1"
-role="doc-biblioref">WORLDOMETERS 2022</a>)</span></p>
-<div class="sourceCode" id="cb1"><pre
+<p>The graph shows that Hawaii’s cases have started to peak, and are
+curving downwards…</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="COVID-Deaths_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
+</div>
+<p>Here, you can see that the line curves upwards, and shows that the
+cases for Wyoming are increasing…</p>
+<h2 id="analysis">Analysis</h2>
+<p>The two graphs show that Hawaii did slightly better than Wyoming at
+the start of the pandemic, as it had less deaths with the same amount of
+cases as Wyoming. <span class="citation" data-cites="Source1">(<a
+href="#ref-Source1" role="doc-biblioref">WORLDOMETERS
+2022</a>)</span></p>
+<div class="sourceCode" id="cb2"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <div id="refs" class="references csl-bib-body hanging-indent"
 role="doc-bibliography">
