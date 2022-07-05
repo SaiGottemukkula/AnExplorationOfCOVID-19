@@ -31,15 +31,36 @@ table$tot_death <- as.numeric(table$tot_death)
 table$tot_cases <- as.numeric(table$tot_cases)
 ```
 
+For the first graphs, I'll compare the most left-leaning state's performance to that of the most right-leaning one during the beginning of the pandemic. According to worldpopulationreview, Hawaii is the most blue state, and Wyoming is the most red state. I'll use those for my comparison.
+
 ```{r graphing, echo = FALSE}
+table
+
 table |>
+  filter(state == "HI") |>
   select(tot_cases, tot_death) |>
   ggplot(aes(x = tot_cases, y = tot_death)) +
+  coord_cartesian(xlim = c(0, 100000), ylim = c(0, 1250)) +
   geom_point(size = 0.15) + 
   geom_smooth() +
-  labs(title = "Coronavirus Cases To Deaths Ratio", subtitle = "The ratio continued upwards for most of the pandemic", x = "Coronavirus Cases", y = "Coronavirus Deaths", caption = "Source: CDC")
+  labs(title = "Coronavirus Cases To Deaths Ratio (Hawaii)", subtitle = "The line curves downwards", x = "Coronavirus Cases", y = "Coronavirus Deaths", caption = "Source: CDC")
 ```
 
+The graph shows that Hawaii's cases have started to peak, and are curving downwards...
 
+```{r}
+table |>
+  filter(state == "WY") |>
+  select(tot_cases, tot_death) |>
+  ggplot(aes(x = tot_cases, y = tot_death)) +
+  coord_cartesian(xlim = c(0, 100000), ylim = c(0, 1250)) +
+  geom_point(size = 0.15) + 
+  geom_smooth() +
+  labs(title = "Coronavirus Cases To Deaths Ratio (Wyoming)", subtitle = "The line curves up", x = "Coronavirus Cases", y = "Coronavirus Deaths", caption = "Source: CDC")
+```
 
+Here, you can see that the line curves upwards, and shows that the cases for Wyoming are increasing...
+
+## Analysis
+The two graphs show that Hawaii did slightly better than Wyoming at the start of the pandemic, as it had less deaths with the same amount of cases as Wyoming.
 [@Source1]
