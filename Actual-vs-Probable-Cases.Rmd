@@ -1,7 +1,7 @@
 ---
 title: "Actual vs Probable Cases"
 description: |
-  [Insert DESCRIPTIONS Here]
+  To analyze the accuracy of four states
 author:
   - name: Sai Gottemukkula 
 date: "`r Sys.Date()`"

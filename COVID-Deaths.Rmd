@@ -1,7 +1,7 @@
 ---
 title: "Coronavirus Deaths vs Cases"
 description: |
-  [Insert DESCRIPTION Here].
+  To compare the deaths/cases ratio of the most left and right-leaning states.
 author:
   - name: Sai Gottemukkula
     
