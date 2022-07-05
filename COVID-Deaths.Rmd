@@ -34,8 +34,6 @@ table$tot_cases <- as.numeric(table$tot_cases)
 For the first graphs, I'll compare the most left-leaning state's performance to that of the most right-leaning one during the beginning of the pandemic. According to worldpopulationreview, Hawaii is the most blue state, and Wyoming is the most red state. I'll use those for my comparison.
 
 ```{r graphing, echo = FALSE}
-table
-
 table |>
   filter(state == "HI") |>
   select(tot_cases, tot_death) |>
@@ -63,4 +61,6 @@ Here, you can see that the line curves upwards, and shows that the cases for Wyo
 
 ## Analysis
 The two graphs show that Hawaii did slightly better than Wyoming at the start of the pandemic, as it had less deaths with the same amount of cases as Wyoming.
+
+
 [@Source1]
