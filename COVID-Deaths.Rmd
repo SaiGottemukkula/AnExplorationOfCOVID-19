@@ -44,7 +44,7 @@ table |>
   labs(title = "Coronavirus Cases To Deaths Ratio (Hawaii)", subtitle = "The line curves downwards", x = "Coronavirus Cases", y = "Coronavirus Deaths", caption = "Source: CDC")
 ```
 
-The graph shows that Hawaii's cases have started to peak, and are curving downwards...
+The graph shows that Hawaii's cases have started to peak, and are curving downwards.
 
 ```{r}
 table |>
@@ -57,7 +57,7 @@ table |>
   labs(title = "Coronavirus Cases To Deaths Ratio (Wyoming)", subtitle = "The line curves upwards", x = "Coronavirus Cases", y = "Coronavirus Deaths", caption = "Source: CDC")
 ```
 
-Here, you can see that the line curves upwards, and shows that the cases for Wyoming are increasing...
+Here, you can see that the line curves upwards, and shows that the cases for Wyoming are increasing.
 
 ## Analysis
 The two graphs show that Hawaii did slightly better than Wyoming at the start of the pandemic, as it had less deaths with the same amount of cases as Wyoming.
