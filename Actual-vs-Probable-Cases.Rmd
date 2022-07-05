@@ -42,7 +42,7 @@ table |>
   select(state, prob_cases) |>
   ggplot(aes(x = state, y = prob_cases, fill = state)) +
   geom_col() +
-  labs(title = "Total Confirmed Cases For Four States", x = "States", y = "Cases (Scientific Notation)", subtitle = "Wyoming has the least cases", caption = "Source: CDC")
+  labs(title = "Total Probable Cases For Four States", x = "States", y = "Cases (Scientific Notation)", subtitle = "Wyoming has the least cases", caption = "Source: CDC")
 ```
 
 Here, the graph shows the *probable* cases for the sames states, on the same day.

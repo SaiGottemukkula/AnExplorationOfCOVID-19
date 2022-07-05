@@ -54,7 +54,7 @@ table |>
   coord_cartesian(xlim = c(0, 100000), ylim = c(0, 1250)) +
   geom_point(size = 0.15) + 
   geom_smooth() +
-  labs(title = "Coronavirus Cases To Deaths Ratio (Wyoming)", subtitle = "The line curves up", x = "Coronavirus Cases", y = "Coronavirus Deaths", caption = "Source: CDC")
+  labs(title = "Coronavirus Cases To Deaths Ratio (Wyoming)", subtitle = "The line curves upwards", x = "Coronavirus Cases", y = "Coronavirus Deaths", caption = "Source: CDC")
 ```
 
 Here, you can see that the line curves upwards, and shows that the cases for Wyoming are increasing...
