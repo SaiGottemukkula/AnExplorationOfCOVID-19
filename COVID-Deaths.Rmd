@@ -31,7 +31,7 @@ table$tot_death <- as.numeric(table$tot_death)
 table$tot_cases <- as.numeric(table$tot_cases)
 ```
 
-For the first graphs, I'll compare the most left-leaning state's performance to that of the most right-leaning one during the beginning of the pandemic. According to worldpopulationreview, Hawaii is the most blue state, and Wyoming is the most red state. I'll use those for my comparison.
+For the first graphs, I'll compare the most left-leaning state's performance to that of the most right-leaning one during the beginning of the pandemic, as well as the most neutral state. Although it's not useful for making any inferences, it's just interesting to see which state performed better. According to worldpopulationreview, Hawaii is the most liberal state, Wyoming is the most conservative state, and Oregon is the most neutral. I'll use these for my comparison.
 
 ```{r graphing, echo = FALSE}
 table |>
@@ -59,8 +59,21 @@ table |>
 
 Here, you can see that the line curves upwards, and shows that the cases for Wyoming are increasing.
 
+```{r}
+table |>
+  filter(state == "OR") |>
+  select(tot_cases, tot_death) |>
+  ggplot(aes(x = tot_cases, y = tot_death)) +
+  coord_cartesian(xlim = c(0, 100000), ylim = c(0, 1250)) +
+  geom_point(size = 0.15) + 
+  geom_smooth() +
+  labs(title = "Coronavirus Cases To Deaths Ratio (Oregon)", subtitle = "The line has no distinct curve", x = "Coronavirus Cases", y = "Coronavirus Deaths", caption = "Source: CDC")
+```
+
+Lastly, this is the data for Oregon. Oregon is split evenly, with 30% of the population being conservative, and with another 30% being liberal. Most people would expect Oregon's cases to be in between that of Hawaii and Wyoming, but Oregon has the most cases out of all three!
+
 ## Analysis
-The two graphs show that Hawaii did slightly better than Wyoming at the start of the pandemic, as it had less deaths with the same amount of cases as Wyoming.
+The two graphs show that Hawaii did slightly better than Wyoming at the start of the pandemic, as it had less deaths with the same amount of cases as Wyoming. However, Oregon has more cases than both of those states, which is unexpected, as most people would have expected it to have COVID-19 cases that were in between Hawaii and Wyoming.
 
 
 [@Source2]
