@@ -6,11 +6,11 @@ title: "About this site"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Welcome to the 'About' page!
+## About me
 
-My name is Sai Gottemukkula, and I'm currently a rising junior at Lexington High School. I enjoy learning about tech, as well as biking with my friends, and playing tennis whenever I can.
+My name is **Sai Gottemukkula**, and I'm currently a rising junior at Lexington High School. I enjoy learning about tech, as well as biking with my friends, and playing tennis whenever I can.
 
-## About the site
+## About the project
 
 I chose to do a project based on the Coronavirus pandemic because it was a global event that completely changed the lives of the current generation, affecting everything from education to jobs. I also felt like I would have done a disservice to all the people that it affected if I did not select the pandemic as my topic.
 
@@ -18,6 +18,6 @@ I chose to do a project based on the Coronavirus pandemic because it was a globa
 * E-mail: saigthefirst@gmail.com
 * Github: https://github.com/SaiGottemukkula
 
-## Data Science
-I made this website as a final project for [David Kane's free datascience bootcamp](https://bootcamp.davidkane.info/)!
+## Credits
+I made this website as a final project for [David Kane's free datascience bootcamp](https://bootcamp.davidkane.info/)! Feel free to check it out - the bootcamp is very informative!
 

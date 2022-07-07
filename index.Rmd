@@ -1,5 +1,5 @@
 ---
-title: "Final Project"
+title: "An Exploration of COVID-19"
 description: |
   Welcome to my final project for the datascience bootcamp!
 site: distill::distill_website
