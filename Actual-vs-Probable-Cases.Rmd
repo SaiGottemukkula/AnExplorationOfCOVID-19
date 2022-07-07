@@ -32,8 +32,10 @@ table |>
   filter (state %in% c("CA", "MA", "WY", "MI"), submission_date == "12/25/2021") |>
   select(state, conf_cases) |>
   ggplot(aes(x = state, y = conf_cases, fill = state)) +
+  coord_cartesian(ylim = c(0, 5000)) +
   geom_col() +
-  labs(title = "Total Confirmed Cases For Four States", x = "States", y = "Cases (Thousands)", subtitle = "Wyoming has the least cases", caption = "Source: CDC")
+  labs(title = "Total Confirmed Cases For Four States", x = "States", y = "Cases (Thousands)", subtitle = "Wyoming has the least cases", caption = "Source: CDC") +
+  theme_classic()
 ```
 
 The graph above shows the *confirmed* cases for four different states for Christmas 2021.
@@ -47,7 +49,8 @@ table |>
   ggplot(aes(x = state, y = prob_cases, fill = state)) +
   coord_cartesian(ylim = c(0, 5000)) +
   geom_col() +
-  labs(title = "Total Probable Cases For Four States", x = "States", y = "Cases (Thousands)", subtitle = "Predicted cases are significantly lower than real-life ones", caption = "Source: CDC")
+  labs(title = "Total Probable Cases For Four States", x = "States", y = "Cases (Thousands)", subtitle = "Predicted cases are significantly lower than real-life ones", caption = "Source: CDC") +
+  theme_classic()
 ```
 
 Here, the graph shows the *probable* cases for the sames states, on the same day. Again, the date is for Christmas 2021. See the massive difference?

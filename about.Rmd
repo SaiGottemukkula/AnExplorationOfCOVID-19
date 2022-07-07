@@ -19,5 +19,5 @@ I chose to do a project based on the Coronavirus pandemic because it was a globa
 * Github: https://github.com/SaiGottemukkula
 
 ## Data Science
-I made this website as a final project for David Kane's free datascience bootcamp!
+I made this website as a final project for [David Kane's free datascience bootcamp](https://bootcamp.davidkane.info/)!
 
