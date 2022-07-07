@@ -31,7 +31,9 @@ table$tot_death <- as.numeric(table$tot_death)
 table$tot_cases <- as.numeric(table$tot_cases)
 ```
 
-For the first graphs, I'll compare the most left-leaning state's performance to that of the most right-leaning one during the beginning of the pandemic, as well as the most neutral state. Although it's not useful for making any inferences, it's just interesting to see which state performed better. According to worldpopulationreview, Hawaii is the most liberal state, Wyoming is the most conservative state, and Oregon is the most neutral. I'll use these for my comparison.
+  For the first graphs, I'll compare the most left-leaning state's performance to that of the most right-leaning one during the beginning of the pandemic, as well as the most neutral state. Although it's not useful for making any inferences, it's just interesting to see which state performed better. 
+  
+  According to worldpopulationreview, Hawaii is the most liberal state, Wyoming is the most conservative state, and Oregon is the most neutral. I'll use these for my comparison.
 
 ```{r graphing, echo = FALSE}
 table |>
@@ -44,7 +46,7 @@ table |>
   labs(title = "Coronavirus Cases To Deaths Ratio (Hawaii)", subtitle = "The line curves downwards", x = "Coronavirus Cases", y = "Coronavirus Deaths", caption = "Source: CDC")
 ```
 
-The graph shows that Hawaii's cases have started to peak, and are curving downwards.
+The graph shows that Hawaii's cases have started to peak, and the line may eventually go down.
 
 ```{r}
 table |>

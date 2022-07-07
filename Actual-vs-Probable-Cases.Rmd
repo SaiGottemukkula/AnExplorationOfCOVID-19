@@ -1,7 +1,7 @@
 ---
 title: "Actual vs Probable Cases"
 description: |
-  To analyze the accuracy of four states
+  To analyze the accuracy of predictions
 author:
   - name: Sai Gottemukkula 
 date: "`r Sys.Date()`"
@@ -23,7 +23,7 @@ library(dplyr)
 table <- read_csv(file = "United_States_COVID-19_Cases_and_Deaths_by_State_over_Time.csv", show_col_types = FALSE)
 ```
 
-Something that I rarely see explored in the context of COVID-19 is how prediction models and AI are used to predict the number of probable cases. For the states, I chose California, Massachusetts, Michigan, and Wyoming. The data is from the CDC, and the number of cases is for Christmas 2021. The results that I got are surprising!
+Something that I rarely see explored in the context of COVID-19 is how prediction models and AI are used to predict the number of probable cases. For the states, I chose California, Massachusetts, Michigan, and Wyoming. The data is from the CDC, and the number of cases is for Christmas 2021. The results are surprising!
 
 ```{r graphing, echo = FALSE}
 table$conf_cases = table$conf_cases / 1000
@@ -45,13 +45,14 @@ table |>
   filter (state %in% c("CA", "MA", "WY", "MI"), submission_date == "12/25/2021") |>
   select(state, prob_cases) |>
   ggplot(aes(x = state, y = prob_cases, fill = state)) +
+  coord_cartesian(ylim = c(0, 5000)) +
   geom_col() +
-  labs(title = "Total Probable Cases For Four States", x = "States", y = "Cases (Thousands)", subtitle = "Wyoming has the least cases", caption = "Source: CDC")
+  labs(title = "Total Probable Cases For Four States", x = "States", y = "Cases (Thousands)", subtitle = "Predicted cases are significantly lower than real-life ones", caption = "Source: CDC")
 ```
 
-Here, the graph shows the *probable* cases for the sames states, on the same day. Again, the date is for Christmas 2021.
+Here, the graph shows the *probable* cases for the sames states, on the same day. Again, the date is for Christmas 2021. See the massive difference?
 
 ## Analysis
-As you can see, the graphs show that the probable cases aren't exactly very accurate. In fact, they're off by thousands of cases! This shows that our predictions can use some improvements. Additionally, the data was taken from Christmas 2021, when cases were expected to grow greatly. Because analysts expected  spike during a major holiday and still underestimated the number of cases, it's reasonable to expect that our predictions would usually be much lower than the actual cases.
+As you can probably see, the graphs show that the probable cases aren't exactly very accurate. In fact, they're off by thousands of cases! This shows that our predictions can use some improvements. Additionally, the data was taken from Christmas 2021, when cases were expected to grow greatly. Because analysts expected  spike during a major holiday and still underestimated the number of cases, it's reasonable to expect that our predictions would usually be much lower than the actual cases.
 
 [@Source2]
