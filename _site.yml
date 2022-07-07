@@ -1,7 +1,7 @@
 name: "."
-title: "An Exploration of COVID-19"
+title: "Final Project"
 description: |
-  My final project for the bootcamp!
+  Final Project
 output_dir: "docs"
 navbar:
   right:
