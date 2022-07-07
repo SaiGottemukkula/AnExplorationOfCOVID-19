@@ -17,6 +17,7 @@ I chose to do a project based on the Coronavirus pandemic because it was a globa
 ## Contact links
 * E-mail: saigthefirst@gmail.com
 * Github: https://github.com/SaiGottemukkula
+* Github repo for this site: https://github.com/SaiGottemukkula/AnExplorationOfCOVID-19.git
 
 ## Credits
 I made this website as a final project for [David Kane's free datascience bootcamp](https://bootcamp.davidkane.info/)! Feel free to check it out - the bootcamp is very informative!
