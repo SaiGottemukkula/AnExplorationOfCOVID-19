@@ -17,6 +17,7 @@ library(knitr)
 For my project, I'm going to use the data from the CDC. Here's the tibble that I'm going to be using:
 
 ```{r}
+
 data <- read_csv(file = "United_States_COVID-19_Cases_and_Deaths_by_State_over_Time.csv", show_col_types = FALSE)
 data
 ```
